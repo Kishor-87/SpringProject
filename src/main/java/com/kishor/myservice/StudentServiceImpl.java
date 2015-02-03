@@ -19,7 +19,6 @@ public class StudentServiceImpl implements StudentService {
 	@Transactional
 	public boolean addStudent(Student student) {
 		// TODO Auto-generated method stub
-		System.out.println("Student:--------------------->" + student);
 		if (student != null) {
 			return studentDAO.addStudent(student);
 		}

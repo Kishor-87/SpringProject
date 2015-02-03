@@ -1,11 +1,14 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<c:set var="baseURL" value="${pageContext.request.contextPath}"></c:set>
 </head>
 <body>
 	<h2>Student Information</h2>
+	<link href="${baseURL}/resources/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
 	<%-- <form:form method="POST" action="/StudentApp/addStudent">
 		<table>
 			<tr>
@@ -30,11 +33,11 @@
 			<div class="span12">
 				<fieldset>
 				<legend>Bootstrap Form With Spring Mvc Example</legend>
-				<form class="form-horizontal" method="post" action='/StudentApp/addStudent' name="employeeForm" id="employeeForm">
+				<form class="form-horizontal" method="post" action='/StudentApp/addStudent' name="employeeForm" id="employeeForm" autoComplete="off">
 					<div class="control-group">
 						<label class="control-label">Name</label>
 						<div class="controls">
-							<input type="text" name="firstName" id="firstName" title="First Name" value="">
+							<input type="text" name="name" id="firstName" title="First Name" value="">
 						</div>
 					</div>
 					<div class="control-group">

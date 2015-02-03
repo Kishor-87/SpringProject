@@ -17,8 +17,9 @@ import com.kishor.myservice.StudentService;
 @Controller
 public class StudentController {
 
-	private static final Logger logger=Logger.getLogger(StudentController.class);
-	
+	private static final Logger logger = Logger
+			.getLogger(StudentController.class);
+
 	@Autowired
 	private StudentService studentService;
 	@Autowired
@@ -32,24 +33,21 @@ public class StudentController {
 	@RequestMapping(value = "/addStudent", method = RequestMethod.POST)
 	public String addStudent(@ModelAttribute("student") Student student,
 			Model model) {
-
 		logger.info("In Student Controller------------------>");
 		if (student != null) {
 			boolean flag = studentService.addStudent(student);
 			if (flag == true) {
 				logger.info("Student Added Successfully:");
-				List<Student> studentList=studentService.listStudent();
-				logger.info("Student List------------>"+studentList);
+				List<Student> studentList = studentService.listStudent();
+				logger.info("Student List------------>" + studentList);
 				sbean.setStudentBeans(studentList);
 				model.addAttribute("sbean", sbean);
-				
-				
+
 			} else {
 				logger.info("Student Not Added:");
 			}
 		}
 		return "output";
 	}
-	
 
 }

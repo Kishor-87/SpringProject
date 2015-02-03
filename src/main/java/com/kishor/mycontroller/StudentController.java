@@ -33,7 +33,6 @@ public class StudentController {
 	@RequestMapping(value = "/addStudent", method = RequestMethod.POST)
 	public String addStudent(@ModelAttribute("student") Student student,
 			Model model) {
-		logger.info("In Student Controller------------------>");
 		if (student != null) {
 			boolean flag = studentService.addStudent(student);
 			if (flag == true) {

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import com.kishor.model.Student;
 @Component
+//This is POJO Class.Only Setting the List
 public class StudentBean {
 	
 	private List<Student> studentBeans;

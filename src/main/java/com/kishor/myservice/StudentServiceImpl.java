@@ -38,6 +38,12 @@ public class StudentServiceImpl implements StudentService {
 		return null;
 	}
 
+	@Override
+	public String getStudentName(Long id) {
+		
+		return null;
+	}
+
 	
 
 }

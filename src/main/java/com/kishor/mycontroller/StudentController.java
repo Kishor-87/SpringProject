@@ -43,7 +43,7 @@ public class StudentController {
 				model.addAttribute("sbean", sbean);
 
 			} else {
-				logger.info("Student Not Added:");
+				logger.info("Student Information Not Added:");
 			}
 		}
 		return "output";

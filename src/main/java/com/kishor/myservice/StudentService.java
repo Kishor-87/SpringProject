@@ -8,6 +8,5 @@ public interface StudentService {
 	public boolean addStudent(Student student);
 	public List<Student> listStudent();
 	public Student findStudentById(Long id);
-	public String getStudentName();
 
 }

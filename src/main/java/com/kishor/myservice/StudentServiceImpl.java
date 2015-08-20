@@ -18,7 +18,7 @@ public class StudentServiceImpl implements StudentService {
 	@Override
 	@Transactional
 	public boolean addStudent(Student student) {
-		// TODO Auto-generated method stub
+		
 		if (student != null) {
 			return studentDAO.addStudent(student);
 		}
@@ -28,8 +28,14 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public List<Student> listStudent() {
-		// TODO Auto-generated method stub
+	
 		return studentDAO.listStudent();
+	}
+
+	@Override
+	public Student findStudentById(Long id) {
+		
+		return null;
 	}
 
 }
